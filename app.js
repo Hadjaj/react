@@ -126,7 +126,7 @@ app.post('/submit-contact', function (req, res) {
     Data.save()
         .then(() => {
             console.log("Data saved successfully");
-            res.redirect('/');
+            res.redirect(process.env.FRONTEND_URL);
         })
         .catch(err => {
             console.log(err);
